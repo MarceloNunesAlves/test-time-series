@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>br.com.flexvision</groupId>
+  <artifactId>test-time-series</artifactId>
+  <version>0.0.1</version>
+  <packaging>jar</packaging>
+
+  <name>test-time-series</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+	<repositories>
+	    <repository>
+	      <id>snapshots</id>
+	      <name>snapshots</name>
+	      <url>http://172.16.7.200:8081/nexus/content/repositories/snapshots</url>
+	      <snapshots>
+	          <enabled>true</enabled>
+	      </snapshots>
+	    </repository>
+	    <repository>
+	      <id>releases</id>
+	      <name>releases</name>
+	      <url>http://172.16.7.200:8081/nexus/content/repositories/releases</url>
+	      <snapshots>
+	          <enabled>false</enabled>
+	      </snapshots>
+	    </repository>
+	    <repository>
+	    	<id>3rd party</id>
+	    	<name>3rd party</name>
+	        <url>http://172.16.7.200:8081/nexus/content/repositories/thirdparty</url>
+	        <snapshots>
+	      	    <enabled>false</enabled>
+	      </snapshots>
+	    </repository>
+	</repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+	<dependency>
+		<groupId>rrdjtool</groupId>
+		<artifactId>rrdjtool</artifactId>
+		<version>4.0</version>
+	</dependency>
+	<dependency>
+		<groupId>org.jrobin</groupId>
+		<artifactId>jrobin</artifactId>
+		<version>1.6.0</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.influxdb</groupId>
+	  <artifactId>influxdb-java</artifactId>
+	  <version>2.8</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>httpclient</artifactId>
+	    <version>4.5.5</version>
+	</dependency>
+  </dependencies>
+</project>
