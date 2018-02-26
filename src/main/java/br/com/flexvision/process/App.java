@@ -1,5 +1,6 @@
 package br.com.flexvision.process;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,9 @@ public class App
     public static void main( String[] args ) throws RrdException, IOException
     {
         System.out.println( "Criando RRD" );
+        
+        File f = new File("/tmp/rrd/teste_1.rrd");
+        f.delete();
         
         RrdDef rrdDef = new RrdDef("/tmp/rrd/teste_1.rrd");
 		rrdDef.setStep(60);//1 Minuto de coleta
